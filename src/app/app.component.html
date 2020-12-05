@@ -18,7 +18,7 @@
                 <th width="32%">Actions</th>
             </tr>
             <ng-container *ngIf="(items | filter:searchText).length > 0; else noResults">
-                <tr *ngFor="let item of items |filter: searchText;let i=index" (click)="showDescription($event,item,i)" [ngClass]="{'active': selectedItem == item}">
+                <tr *ngFor="let item of items |filter: searchText;let i=index" (click)="showDescription($event,item,item.id)" [ngClass]="{'active': selectedItem == item}">
 
                     <ng-container *ngIf="item.date !=null; else noDate">
                         <td class="grey-regular-text text-center">{{item.date | date:"MMM dd" }}</td>

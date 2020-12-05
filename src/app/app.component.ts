@@ -21,13 +21,6 @@ export class AppComponent implements OnInit {
     this.items = companyList;
     console.log(this.items[0].details);
   }
-
-
-
-
-
-
-
   savedList = "SAVED LISTS";
   savedListIcon = "fa fa-list-ul";
 
@@ -37,19 +30,17 @@ export class AppComponent implements OnInit {
 
   savedHistory = "SAVED HISTORY";
   savedHistoryIcon = "fa fa-history";
-
-
-  showDescription(event:Event, clickItem, index)
-  {
-      console.log(clickItem);
-      this.selectedItem=clickItem;
-      this.currIndex=index;
-  }
-
-
   searchThis(data)
   {
       this.searchText=data;
       this.selectedItem=null;
+  }
+  
+  showDescription(event, clickItem, index)
+  {
+      console.log(clickItem);
+      this.selectedItem=clickItem;
+      this.currIndex=index-1;
+      console.log(this.currIndex);
   }
 }
