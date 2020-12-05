@@ -31,7 +31,7 @@
 
                     <td class="black-bold-text" [ngClass]="{'blueBoldText': item.details.length == 0 }">{{item.listName}}</td>
                     <td class="black-regular-text">{{item.details.length}}</td>
-                    <td class="flexbox-space-between" style="height: 60px;display: flex;align-items: center;">
+                    <td class="flexbox-space-between iconWrap">
                         <div class="icons">
                             <i class="fa fa-envelope"></i>
                             <i class="fa fa-share-alt" *ngIf="item.details.length > 0"></i>

@@ -238,6 +238,12 @@ tr:hover {
     font-weight: 600;
 }
 
+.iconWrap {
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
 @media (max-width:1100px) {
     .leftHeader {
         min-width: auto;
