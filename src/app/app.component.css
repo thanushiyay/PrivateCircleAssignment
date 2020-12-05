@@ -1,0 +1,266 @@
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px 18px;
+    background: #f1f0f0;
+    box-sizing: border-box;
+}
+
+.leftHeader {
+    min-width: 50%;
+}
+
+td.blueBoldText {
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: rgb(68, 187, 235);
+}
+
+.saved {
+    background: blue;
+}
+
+.rightHeader {
+    width: 50%;
+}
+
+section {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    display: flex;
+    position: relative;
+}
+
+.leftSection {
+    width: 78%;
+    max-height: calc(100vh - 70px);
+    overflow-y: auto;
+    position: relative;
+}
+
+.lightBlueText {
+    color: rgb(37, 87, 97);
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 4px 0;
+}
+
+.greyWrapper {
+    width: 100%;
+    background: #faf6f6;
+    padding: 12px 12px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.greyWrapper p {
+    color: grey;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+.rigthSection {
+    width: 22%;
+    height: calc(100vh - 70px);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    border-left: 1px solid lightgrey;
+}
+
+
+/* table */
+
+table {
+    width: 100%;
+    height: auto;
+    border-collapse: collapse;
+    max-height: calc(100vh - 70px);
+    overflow-y: auto;
+}
+
+.tableHeader {
+    padding: 10px 0px;
+    border-bottom: 1px solid lightgrey;
+    width: 100%;
+    height: 50px;
+    position: sticky;
+    position: sticky;
+    top: 0px;
+}
+
+tr {
+    padding: 10px 0px;
+    border-bottom: 1px solid lightgrey;
+    width: 100%;
+    height: 60px;
+    padding: 0 20px;
+}
+
+th,
+td {
+    font: 13px "Poppins-Medium";
+    color: gray;
+    position: sticky;
+    text-align: left;
+    padding: 0 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+th {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: white;
+}
+
+td {
+    font: 13px "Poppins-Regular";
+}
+
+table.with-ellipsis td {
+    text-overflow: ellipsis;
+}
+
+th:first-child,
+td:first-child {
+    padding-left: 40px;
+}
+
+th:last-child,
+td:last-child {
+    padding-right: 40px;
+}
+
+tr:hover {
+    cursor: pointer;
+}
+
+
+/* scrollbar */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 20px;
+    width: 10px;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background: rgb(179, 178, 178);
+    border-radius: 20px;
+    width: 10px;
+}
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: rgb(121, 119, 119);
+}
+
+.stickyTop {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid lightgrey;
+}
+
+.active .detailButton {
+    background: white;
+    border-bottom: 3px solid rgb(7, 55, 66);
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.active {
+    background: #f1f0f0;
+    cursor: pointer;
+}
+
+.active .icons i {
+    color: black;
+}
+
+.icons i {
+    margin-right: 22px;
+    font-size: 14px;
+    color: lightgrey;
+}
+
+.grey-regular-text {
+    color: rgb(184, 181, 181);
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.black-regular-text {
+    color: black;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: right;
+}
+
+.black-bold-text {
+    color: black;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.detailButton {
+    padding: 6px 15px;
+    color: rgb(6, 37, 44);
+    font-size: 12px;
+}
+
+.icons img {
+    width: 25px;
+    height: 25px;
+}
+
+.greyWrapper p.blueText {
+    margin-left: 10px;
+    color: rgb(37, 87, 97) !important;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+@media (max-width:1100px) {
+    .leftHeader {
+        min-width: auto;
+    }
+    th:first-child,
+    td:first-child {
+        padding-left: 23px;
+    }
+    th:last-child,
+    td:last-child {
+        padding-right: 23px;
+    }
+    .rightHeader {
+        width: auto;
+        justify-content: flex-start;
+    }
+    .icons {
+        display: flex;
+    }
+    .black-bold-text {
+        font-size: 13px;
+    }
+    .grey-regular-text {
+        font-size: 11px;
+    }
+}
